@@ -1,0 +1,128 @@
+body {
+    margin: 0; /* убрать внешний отступ */
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    margin: 0; /*убрать отступ */
+    padding: 0; /*убрать отступ слева от списка*/
+    list-style: none; /*убрать точки в списке*/
+}
+
+.header li
+
+/*добавили header, чтобы это условие коснулось только списка в теге header*/
+    {
+    display: inline; /*выравнить в одну строчку элементы списка*/
+    margin-right: 30px; /*отступы между элементами списка*/
+}
+
+li:last-child {
+    margin-right: 0;
+    /*убрать отступ справа*/
+}
+
+.header
+
+/*не сам header, а класс header*/
+    {
+    background-color: rgb(219, 32, 100);
+    /*цвет фона в заголовке*/
+    color: rgb(255, 255, 255);
+    /*цвет текста*/
+    padding: 20px 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-image: url(images/background.jpg);
+    background-size: cover;
+}
+
+.main-menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.p {
+    text-align: justify;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.container {
+    max-width: 75%;
+    /**/
+    margin: 0 auto;
+}
+
+.avatar {
+    height: 300px;
+    text-align: center;
+    background-image: url(images/background1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.avatar img {
+    height: 100%;
+}
+
+.btn-white
+
+/*импортант это значит что он главнее*/
+    {
+    color: white !important;
+    border-color: white !important; /*граница кнопки*/
+}
+
+.btn
+
+/* класс для оформления кнопко*/
+    {
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: color 1s, border-color 1s;
+}
+
+.btn:hover /*класс для обозначения цвета кнопки при наведении курсора (hover)*/ {
+    color: blue;
+    border-color: blue;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+th,
+td {
+    padding: 5px;
+    text-align: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}

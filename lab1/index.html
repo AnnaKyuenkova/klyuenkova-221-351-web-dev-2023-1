@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Веб-разработчик</title> <!--заголовок сайта который отображается в браузере-->
+    
+    <!-- добавление шрифтов (шрифты брать с сайта google fonts, там же есть html код) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css"> <!--подключаем нащ стиль-->
+</head>
+<body>
+    <header class="header"> <!--шапка сайта-->
+        <div class="container">
+        <nav class="main-menu"><!--навигация-->
+            <ul><!--список-->
+                <li><a href="#about">Обо мне</a></li><!--якорные ссылки (пишутся в атрибутах с помощью # и указывают на id нужного тега)-->
+                <li><a href="#skills">Навыки</a></li>
+                <li><a href="#tech">Технологии</a></li>
+            </ul>
+        </nav>
+        <div>
+            <h1> <!--самый большой и самый главный заголовок-->
+                Иванов Иван Иванович
+            </h1>
+            <p class="w-50 mx-auto"> <!--Класс "w-50" указывает на применение стилей, 
+                которые устанавливают ширину элемента в 50% от родительского контейнера. 
+                Класс "mx-auto" указывает на применение стилей, 
+                которые центрируют элемент по горизонтали относительно родительского контейнера. -->
+                Что-то об иване
+            </p>
+            <a class="btn btn-white" href="mailto:ivan@yandex.ru">Написать мне</a>
+        </div>
+        
+    </header>
+    <main>
+        <div class="container">
+
+        <section id="about"> <!--это айди тега, чтобы можно было на него сослаться-->
+            <h3>Обо мне</h3>
+            <figure class="avatar">
+                <img src="images/person.png" alt="Person">
+            </figure>
+
+           <p>Lorem, ipsum dolor sit amet, consectetur adipisicing elit. 
+                Sequi error qui corporis ratione. Velit, quisquam aliquid? 
+                Commodi tenetur assumenda eum. 
+                Omnis iusto similique quia molestiae officiis 
+                magni voluptatibus autem fugit.</p> 
+                
+            <a class="btn" href="about.html">Подробнее</a>
+
+            
+        </section>
+
+        <section id="skills">
+            <h3>Навыки</h3>
+            <p>Lorem, ipsum dolor sit amet, consectetur adipisicing elit. 
+                Sequi error qui corporis ratione. Velit, quisquam aliquid? 
+                Commodi tenetur assumenda eum. 
+                Omnis iusto similique quia molestiae officiis 
+                magni voluptatibus autem fugit.</p>
+
+            <a class="btn" href="skills.html">Подробнее</a>
+
+        </section>
+
+        <section id="tech">
+            <h3>Технологии</h3>
+            <p>Lorem, ipsum dolor sit amet, consectetur adipisicing elit. 
+                Sequi error qui corporis ratione. Velit, quisquam aliquid? 
+                Commodi tenetur assumenda eum. 
+                Omnis iusto similique quia molestiae officiis 
+                magni voluptatibus autem fugit.</p>
+
+            <a class="btn" href="technologies.html">Подробнее</a>
+
+            <ol>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ol>
+        </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            &copy; Иванов И.И.
+        </div>
+    </footer>
+
+</body>
+</html>
