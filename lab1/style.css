@@ -1,89 +1,96 @@
-body {
+body 
+{
     margin: 0; /* убрать внешний отступ */
-    font-family: 'Roboto', sans-serif;
+   /* font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif; */
 }
 
-ul {
+ul 
+{
     margin: 0; /*убрать отступ */
-    padding: 0; /*убрать отступ слева от списка*/
-    list-style: none; /*убрать точки в списке*/
+    padding: 0px; /*убрать отступ слева от списка*/
+    /*list-style: none; убрать точки в списке*/
+    background-color: rgb(0, 0, 0, 0.65);
 }
 
-.header li
-
-/*добавили header, чтобы это условие коснулось только списка в теге header*/
-    {
+.header li /*добавили header, чтобы это условие коснулось только списка в теге header*/
+{
     display: inline; /*выравнить в одну строчку элементы списка*/
-    margin-right: 30px; /*отступы между элементами списка*/
+    margin-left: 60px; /*отступы между элементами списка*/
 }
 
-li:last-child {
-    margin-right: 0;
-    /*убрать отступ справа*/
+li:last-child 
+{
+    margin-right: 0; /*убрать отступ справа*/
 }
 
-.header
-
-/*не сам header, а класс header*/
-    {
-    background-color: rgb(219, 32, 100);
-    /*цвет фона в заголовке*/
-    color: rgb(255, 255, 255);
-    /*цвет текста*/
+.header /*не сам header, а класс header*/
+{
+    background-color: rgb(0, 0, 0); /*цвет фона в заголовке*/
+    color: rgb(255, 255, 255); /*цвет текста*/
     padding: 20px 0;
-    letter-spacing: 1px;
+    font-size: 20px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     background-image: url(images/background.jpg);
     background-size: cover;
 }
 
-.main-menu a {
+.main-menu a 
+{
     text-decoration: none;
     color: white;
     font-weight: bold;
 }
 
-.p {
-    text-align: justify;
+.main-menuu a 
+{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: larger;
 }
 
-.footer {
+.footer 
+{
     background-color: black;
     color: white;
     padding: 20px;
     margin-top: 10px;
 }
 
-.container {
-    max-width: 75%;
-    /**/
-    margin: 0 auto;
+.container
+{
+    max-width: 100%;
+    margin-left: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
-.avatar {
-    height: 300px;
+.avatar 
+{
+    height: 600px;
+    width: 1000px;
     text-align: center;
     background-image: url(images/background1.png);
     background-repeat: no-repeat;
-    background-position: center;
+    background-size:contain;
+    background-position: left;
 }
 
-.avatar img {
+.avatar img 
+{
     height: 100%;
 }
 
-.btn-white
-
-/*импортант это значит что он главнее*/
-    {
-    color: white !important;
+.btn-white 
+{
+    color: white !important;/*импортант это значит что он главнее*/
     border-color: white !important; /*граница кнопки*/
 }
 
-.btn
-
-/* класс для оформления кнопко*/
-    {
+.btn /* класс для оформления кнопко*/
+{
     text-decoration: none;
     color: black;
     border: 2px solid black;
@@ -93,36 +100,76 @@ li:last-child {
     transition: color 1s, border-color 1s;
 }
 
-.btn:hover /*класс для обозначения цвета кнопки при наведении курсора (hover)*/ {
-    color: blue;
-    border-color: blue;
+.btn:hover /*класс для обозначения цвета кнопки при наведении курсора (hover)*/ 
+{
+    color: rgb(169, 82, 2);
+    border-color: rgb(169, 82, 2);
 }
 
-table {
+table 
+{
     border-collapse: collapse;
 }
 
 table,
 th,
-td {
+td 
+{
     border: 1px solid black;
 }
 
 th,
-td {
+td 
+{
     padding: 5px;
     text-align: center;
 }
 
-.text-center {
+.text-center 
+{
     text-align: center;
 }
 
-.w-50 {
+.w-50 
+{
     width: 50%;
 }
 
-.mx-auto {
+.mx-auto 
+{
     margin-left: auto;
     margin-right: auto;
+}
+
+h1
+{
+    text-align: center;
+    font-size: 60px;
+    font-weight: bolder;
+    background-color: rgb(0, 0, 0, 0.65);
+}
+
+p 
+{
+    font-size: 18px;
+    width: 100%;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+h3 
+{
+    font-size: 30px;
+    text-align: center;
+}
+
+.contour
+{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000000;
+}
+
+h4
+{
+    font-size: 25px;
 }
