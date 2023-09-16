@@ -83,6 +83,11 @@ li:last-child
     height: 100%;
 }
 
+img
+{
+    
+}
+
 .btn-white 
 {
     color: white !important;/*импортант это значит что он главнее*/
