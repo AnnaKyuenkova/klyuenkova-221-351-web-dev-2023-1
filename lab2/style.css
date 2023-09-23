@@ -26,8 +26,8 @@ fieldset
 
 form
 {
-    margin-left: 15px;
     text-align: center;
+    margin-left: 15px;
 }
 
 .btn 
@@ -39,10 +39,32 @@ form
     border-radius: 5px;
     display: inline-block;
     transition: color 1s, border-color 1s;
+    background-color: rgb(33, 0, 64);
 }
 
 .btn:hover
 {
-    color: rgb(183, 156, 255);
-    border-color: rgb(158, 123, 255);
+    color: rgb(233, 185, 255);
+    border-color: rgb(145, 14, 206);
 }
+
+p
+{
+    margin-bottom: 8px;
+}
+
+.container
+{
+    margin-left: 475px;
+    background-color: rgb(1, 48, 78, 0.15);
+    background-image: url(images/background2.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    border: 2px solid rgb(145, 14, 206);
+    border-style: none;
+    padding: 30px;
+    border-radius: 5px;
+    width: 200px; 
+    height: 200px;
+}
+

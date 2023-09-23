@@ -15,20 +15,20 @@
         <h1>Регистрация</h1>    
     </header>  
 
-    <form method="POST" action="http://httpbin.org/post"> 
+    <form method="POST" action="http://httpbin.org/post" class="container"> 
         <div>
-            <label for="login">Логин:</label>
+            <p><label for="login">Логин:</label></p>
             <input type="text" id = "fio" placeholder="Введите логин" name="fio">
         </div>
         <div>
-            <label for="password">Пароль:</label>
+            <p><label for="password">Пароль:</label></p>
             <input type="password" id = "email" placeholder="Введите пароль" name="fio" required>
         </div>
         <div>
             <input type="checkbox" name="remember" id="remember">
             <label for="remember">Запомнить меня</label>
         </div>
-        <button type="submit">Отправить</button>
+        <button type="submit" class="btn">Войти</button>
     </form>
 </body>
 </html>
