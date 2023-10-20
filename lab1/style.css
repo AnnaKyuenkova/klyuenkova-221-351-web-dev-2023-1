@@ -101,7 +101,7 @@ li:last-child
     transition: color 1s, border-color 1s;
 }
 
-.btn:hover /*класс для обозначения цвета кнопки при наведении курсора (hover)*/ 
+.btn:hover /*псевдокласс для обозначения цвета кнопки при наведении курсора (hover)*/ 
 {
     color: rgb(169, 82, 2);
     border-color: rgb(169, 82, 2);
