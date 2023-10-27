@@ -1,5 +1,8 @@
 "use strict";
 function miniDigit (x) {
+    if ((x | 0) != x || x <= 0) {
+        return "ОШИБКА!!! Число x должно быть натуральным!!!"
+    }     
     let minNum = 9;
     let newX = x;
     while (newX != 0) {
@@ -9,7 +12,7 @@ function miniDigit (x) {
         }
         let remm = newX % 10;
         newX = (newX - remm) / 10;
-    }
+    }  
     return minNum;
 }
 
