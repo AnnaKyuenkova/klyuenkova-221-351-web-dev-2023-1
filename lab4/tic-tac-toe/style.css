@@ -1,0 +1,103 @@
+#game {
+    height: 500px;
+    width: 500px;
+    margin: auto;
+    text-align: center;
+} /*сама игра*/
+
+#board {
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    font-size: 5rem;
+    background-color: rgb(234, 234, 234);
+    border: 2px solid #3a3838;
+    color: #3a3838;
+} /*поле для крестиков ноликов*/
+
+.field {
+    float: left;
+    height: 100px;
+    width: 100px;
+    box-sizing: border-box;
+    border: 2px solid #3a3838;
+} /*квадраты в поле*/
+
+#btn {
+    width: 200px;
+    height: 50px;
+    border: 1.5px solid white;
+    border-radius: 5px 0 5px 0;
+    color: #fff;
+    text-align: center;
+    background-color: #3a3838;
+    margin: 30px;
+    font-size: 20px;
+    transition: color 1s, border-color 1s;
+} /*кнопочка "новая игра"*/
+
+.message {
+    border: 1px solid cyan;
+    border-radius: 7px;
+    padding: 5px;
+} /*сообщение (при окончании игры)*/
+
+.messageGood {
+    background-color: rgb(139, 241, 80);
+    border-color: rgb(20, 66, 22);
+} /*победа*/
+
+.messageBad {
+    background-color: rgb(251, 95, 95);
+    border-color: rgb(84, 11, 11);
+} /*ошибка*/
+
+body {
+    background-color: #2b2b2b;
+    color: #3a3838;
+    background-image: url(images/background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+} 
+
+a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 1s, border-color 1s;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    border: 1.5px solid white;
+    border-radius: 5px 0 5px 0;
+    color: #fff;
+    background-color: #3a3838;
+    font-size: 20px;
+    transition: color 1s, border-color 1s;
+} /*кнопочка "На главную"*/
+
+.cont {
+    width: 200px;
+    height: 50px;
+    border: 1.5px solid white;
+    border-radius: 5px 0 5px 0;
+    text-align: center;
+    background-color: #3a3838;
+    margin: 30px;
+    font-size: 20px;
+    transition: color 1s, border-color 1s;
+}
+
+a:hover {
+    color: rgb(98, 144, 244);
+}
+
+#btn:hover {
+    color: rgb(98, 144, 244);
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
