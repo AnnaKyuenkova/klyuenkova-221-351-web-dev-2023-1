@@ -1,0 +1,57 @@
+.section1 {
+    color: white;
+    font-size: 30px;
+}
+
+.section2 {
+    color: rgb(0, 0, 0);
+    background-color: white;
+}
+
+.section3 {
+    color: white;
+}
+
+.section4 {
+    background-color: #aea191;
+    color: white;
+}
+
+header {
+    background-color: rgb(255, 255, 255);
+}
+
+.greyBack {
+    background-color: rgb(38,38,38);
+}
+
+span {
+    color: #ea740b;
+    font-size: large;
+    font-weight: bold;
+}
+
+.knopka {
+    background-color: #ea740b;
+    color: white;
+}
+
+.icon {
+    color: white;
+    font-size: 30px;
+}
+
+header {
+    border-bottom: 1px solid rgb(38,38,38);
+    background-color: #aea191 !important;
+}
+
+footer {
+    background-color: rgb(38,38,38);
+    color: white;
+}
+ a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+ }
