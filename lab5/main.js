@@ -126,4 +126,80 @@ window.onload = function () {
     downloadData();
     document.querySelector('.pagination').onclick = pageBtnHandler;
     document.querySelector('.per-page-btn').onchange = perPageBtnHandler;
+}
+
+/* */
+
+document.querySelector('.pagination').onclick = pageBtnHandler;
+document.querySelector('.per-page-btn').onchange = perPageBtnHandler;
+document.querySelector('.search-btn').onclick = searchBtnHandler;
+document.querySelector('.search-field').addEventListener('input', autocompleteHandler);
+
+function searchBtnHandler() {
+    const searchField = document.getElementById('searchField');
+    const searchQuery = searchField.value.trim();
+    if (searchQuery !== "") {
+        downloadData(1, searchQuery);
+        document.getElementById('autocompleteDropdown').innerHTML = ""; // Clear autocomplete dropdown
+    }
+}
+
+function autocompleteHandler(event) {
+    const searchField = document.getElementById('searchField');
+    const autocompleteDropdown = document.getElementById('autocompleteDropdown');
+    const searchQuery = searchField.value.trim();
+
+    if (searchQuery !== "") {
+        const rect = searchField.getBoundingClientRect();
+        autocompleteDropdown.style.width = rect.width + 'px';
+        autocompleteDropdown.style.top = rect.bottom + 'px';
+        autocompleteDropdown.style.left = rect.left + 'px';
+
+        fetch(`http://cat-facts-api.std-900.ist.mospolytech.ru/autocomplete?q=${searchQuery}`)
+            .then(response => response.json())
+            .then(data => {
+                autocompleteDropdown.innerHTML = "";
+                data.forEach(suggestion => {
+                    const suggestionItem = document.createElement('div');
+                    suggestionItem.classList.add('autocomplete-item');
+                    suggestionItem.innerText = suggestion;
+                    suggestionItem.addEventListener('click', () => {
+                        searchField.value = suggestion;
+                        autocompleteDropdown.innerHTML = "";
+                        searchBtnHandler();
+                    });
+                    autocompleteDropdown.appendChild(suggestionItem);
+                });
+            })
+            .catch(error => console.error('Autocomplete error:', error));
+    } else {
+        autocompleteDropdown.innerHTML = "";
+    }
+}
+
+function downloadData(page = 1, searchQuery = "") {
+    let factsList = document.querySelector('.facts-list');
+    let url = new URL(factsList.dataset.url);
+    let perPage = document.querySelector('.per-page-btn').value;
+    url.searchParams.append('page', page);
+    url.searchParams.append('per-page', perPage);
+    url.searchParams.append('q', searchQuery); // Add the 'q' parameter for search
+
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', url);
+    xhr.responseType = 'json';
+    xhr.onload = function () {
+        renderRecords(this.response.records);
+        setPaginationInfo(this.response['_pagination']);
+        renderPaginationElement(this.response['_pagination']);
+    };
+    xhr.send();
+}
+
+window.onload = function () {
+    downloadData();
+    document.querySelector('.pagination').onclick = pageBtnHandler;
+    document.querySelector('.per-page-btn').onchange = perPageBtnHandler;
+    document.querySelector('.search-btn').onclick = searchBtnHandler;
+    document.getElementById('searchField').addEventListener('input', autocompleteHandler);
 };
