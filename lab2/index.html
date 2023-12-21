@@ -16,32 +16,20 @@
     </header>  
 
     <form method="POST" action="http://httpbin.org/post" class="container2"> 
-    <!-- тэг form - для создания формы
-    атрибут method - определяет метод, по которому будет отправляться форма
-    атрибут action - куда будет отправляться форма-->
         <div>
             <label for="fio">ФИО:</label> 
-            <!-- тэг label создает надписи к элементу формы -->
             <input type="text" id = "fio" placeholder="Иванов Иван Иванович" name="fio">
-            <!-- input создает элемент формы, его вид определяется атрибутами-->
-            <!-- type определяет тип отображающегося элемента, здесь - текст -->
-            <!-- id создает индентификатор элемента-->
-            <!-- placeholder используется для примера (серенький текст)-->
-            <!-- name - название, под которым данные будут отправлены на сервер -->
         </div>
         <div>
             <label for="email">Email:</label>
             <input type="email" id = "email" placeholder="ivan@ivanov.ru" name="fio" required>
-            <!-- reauired - обязательное поле -->
         </div>
 
         <fieldset> <!--этот тэг нужен для группировки связанных друг с другом элементов-->
             <legend>Как вы о нас узнали?</legend>
-            <!-- тэг legend задает заголовок для группы элементов-->
             <div>
                 <input type="radio" name="source" id="friends">
                 <label for="friends">Друзья</label>
-                <!-- радио-кнопка - выбор из нескольких вариантов-->
             </div>
             <div>
                 <input type="radio" name="source" id="ad">
@@ -52,16 +40,13 @@
         <div>
             <label for="feedback_type">Тип обращения</label>
             <select name="feedback_type" id="feedback_type"> 
-                <!-- select - выбор из выпадающего списка-->
                 <option value="1">Жалоба</option>
-                <!-- option - список-->
                 <option value="2">Предложение</option>
             </select>
         </div>
         <div>
             <label for="text">Текст сообщения</label>
             <textarea name="text" id="text"></textarea>
-            <!-- textarea - большое текстовое поле-->
         </div>
 
         <div>
@@ -75,8 +60,6 @@
         </div>
 
         <button type="submit">Отправить</button>
-        <!-- button - кнопка-->
-        <!-- type="submit" - отправка формы-->
     </form>
 </body>
 </html>
